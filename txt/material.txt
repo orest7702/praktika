@@ -1,0 +1,11 @@
+id	name_material	kilkist_kg	vartist_USD	fk_material_vudybytok
+1,	Water,		135000,		135,		1
+2,	Water,		108450,		108.45,		2
+3,	Methane,	117600,		58.8,		3
+4,	Methane_CCS,	123600,		61.8,		4
+5,	Methane,	120000,		60,		5
+6,	Biomass,	145000,		14.5,		6
+7,	Water,		119250,		119.25,		7
+8,	Water,		99000,		99,		8
+9,	Methane,	130400,		65.2,		9
+10,	Methane,	120400,		60.2,		10

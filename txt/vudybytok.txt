@@ -1,0 +1,11 @@
+id, vugotovleny, tehnologiy
+1, 13500, electroliz_Alkaline
+2, 12000, electroliz_PEM
+3, 14700, SMR 
+4, 15450, SMR+CCS
+5, 15000, piroliz_metany
+6, 14500, z_biomasu
+7, 13250, electroliz_PEM
+8, 11000, electroliz_Alkaline
+9, 16300, SMR
+10, 15050, piroliz_metany

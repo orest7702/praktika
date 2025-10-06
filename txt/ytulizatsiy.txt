@@ -1,0 +1,11 @@
+id, tip_vidhodiv, metod, kilcist, fk_ytulizatsiy_ochustka
+1,Liquid,Filtration,13.5,1
+2,Liquid,Filtration,12.0,2
+3,Gaseous,Venting,147,3
+4,Gaseous,Catalysis,15.45,4
+5,Gaseous,Venting,15.0,5
+6,Solid,Recycling,145,6
+7,Liquid,Filtration,13.25,7
+8,Liquid,Filtration,11.0,8
+9,Gaseous,Venting,163,9
+10,Gaseous,Venting,15.05,10

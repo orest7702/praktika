@@ -1,0 +1,11 @@
+id, chistota, metod_ochustku, kilkist_vidhodiv, fk_ochistka_product
+1,99.9,PSA(PressureSwingAdsorption),13.5,1
+2,99.95,PSA+membrany,12.0,2
+3,97,MembranSeparation,147,3
+4,99,PSA+CatalyticOxidation,15.45,4
+5,99.5,PSA,15.0,5
+6,98-99,MembranSeparation,145,6
+7,99.95,PSA+membrany,13.25,7
+8,99.9,PSA,11.0,8
+9,98,MembranSeparation,163,9
+10,99.5,PSA,15.05,10

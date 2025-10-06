@@ -1,0 +1,11 @@
+id, name, obem, address, fk_spogivachi_transportuvany
+1,John,15000,Kyiv Shevchenka St, 		 1
+2,Alice,12050,Lviv Svobody Ave, 		 2
+3,Bob,14700,Odessa Deribasivska St,		 3
+4,Emma,15450,Kharkiv Sumskaya St,		 4
+5,Michael,15000,Dnipro Yavornytskoho Ave,	 5
+6,Sophia,14500,Kherson Sobornosti Ave,		 6
+7,Daniel,13250,Cherkasy Shevchenka St,		 7
+8,Olivia,11000,Lutsk Voli Ave,			 8
+9,William,16300,Zaporizhzhia Sobornyi Ave, 	 9
+10,Emily,15050,Poltava Kotsiubynskoho St,	 10

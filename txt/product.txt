@@ -1,0 +1,11 @@
+id,name_product, chistota, domishku, obem, fk_prodyct_vudybytok
+1, Hydrogen,  99.9 ,	 "O₂ H₂O", 			13500, 	1
+2, Hydrogen,  99.95 , 	 "O₂ H₂O", 			12000, 	2
+3, Hydrogen,  97,	 "O₂ N₂ H₂O CO₂ CO",	 	14700, 	3
+4, Hydrogen,  99,	 "CO₂ O₂", 			15450, 	4
+5, Hydrogen,  99.5,	 "H₂O CH₄", 			15000, 	5
+6, Hydrogen,  98,	 "H₂O CO₂", 			14500, 	6
+7, Hydrogen,  99.95,	 "O₂ H₂O", 			13250, 	7
+8, Hydrogen,  99.9,  	 "O₂ H₂O", 			11000, 	8
+9, Hydrogen,  98,	 "O₂ N₂ H₂O CO₂ CO", 		16300, 	9
+10, Hydrogen, 99.5, 	 "H₂O CH₄", 			15050, 	10
