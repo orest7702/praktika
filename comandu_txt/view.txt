@@ -1,4 +1,4 @@
-SELECT  
+SELECT     
     save.id AS save_id,  
     ochistka.chistota AS chistota,  
     ytulizatsiy.id AS ytulizatsiy_id  
