@@ -1,0 +1,15 @@
+SELECT  
+    save.id AS save_id,  
+    ochistka.chistota AS chistota,  
+    ytulizatsiy.id AS ytulizatsiy_id  
+FROM save
+JOIN ochistka ON save.fk_save_ochistka = ochistka.id
+JOIN ytulizatsiy ON ytulizatsiy.fk_ytulizatsiy_ochustka = ochistka.id
+WHERE save.tisk > 200 AND ochistka.chistota > 98;
+
+drop view save_view;
+
+create view save_view AS 
+SELECT save.id, save.tisk, ochistka.id as ochistka_id, ochistka.chistota
+FROM save, ochistka
+WHERE tisk < 200 and ochistka.chistota < 98;
