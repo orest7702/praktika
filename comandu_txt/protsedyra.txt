@@ -1,0 +1,61 @@
+DROP PROCEDURE IF EXISTS dodavany_spogivacha;
+
+DELIMITER $$
+
+CREATE PROCEDURE dodavany_spogivacha (IN id_spogivachy INT)
+BEGIN
+	
+	INSERT INTO vudybytok(id, vugotovleno_v_litrah, tehnologiy)
+    VALUES (13, 20000,  "electroliz");
+    
+    INSERT INTO product (name_product, chistota, domishku, obem_v_litrah, fk_prodyct_vudybytok)
+    VALUES (" Hydrogen", 100, 0, 20000, 13);
+    
+    INSERT INTO ochistka (chistota, metod_ochustku, kilkist_vidhodiv, fk_ochistka_product)
+    VALUES (100, "немає", 0, (
+    select id from product where fk_prodyct_vudybytok = 13
+    ));
+    
+    INSERT INTO save (stan, max_obem, kilCist_obemy, tisk, fk_save_ochistka)
+    VALUES ("gaz", 20000, 20000, 20, (
+	SELECT ochistka.id
+	FROM ochistka
+	JOIN product ON ochistka.fk_ochistka_product = product.id
+	JOIN vudybytok ON product.fk_prodyct_vudybytok = vudybytok.id
+	WHERE vudybytok.id = 13));
+    
+    
+    INSERT INTO transportuvany (tip, vidstan, obem, data_vidpravci, fk_transportuvany_save)
+    VALUES ("Land", 100, 20000, '2025-10-15', (
+    SELECT save.id
+    FROM save
+    JOIN ochistka ON save.fk_save_ochistka = ochistka.id
+	JOIN product ON ochistka.fk_ochistka_product = product.id
+	JOIN vudybytok ON product.fk_prodyct_vudybytok = vudybytok.id
+	WHERE vudybytok.id = 13
+    ));
+    
+    UPDATE spogivachi
+    SET fk_spogivachi_transportuvany = (
+    SELECT transportuvany.id
+    FROM transportuvany
+    JOIN save ON transportuvany.fk_transportuvany_save = save.id
+	JOIN ochistka ON save.fk_save_ochistka = ochistka.id
+	JOIN product ON ochistka.fk_ochistka_product = product.id
+	JOIN vudybytok ON product.fk_prodyct_vudybytok = vudybytok.id
+	WHERE vudybytok.id = 13
+    )
+    
+	WHERE id = id_spogivachy;
+    select id_spogivachy;
+    
+    
+END $$
+
+DELIMITER ;
+
+INSERT INTO spogivachi(name, obem, address, fk_spogivachi_transportuvany)
+VALUES("FF", 20000, "DDD", NULL);
+
+
+CALL dodavany_spogivacha(11);
